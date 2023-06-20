@@ -4,7 +4,7 @@ import * as token from "@solana/spl-token"
 
 // ------------------ CONFIG --------------------------------------
 
-const IS_DEVNET = false; // Set to false if you use `amman start`
+const IS_DEVNET = true; // Set to false if you use `amman start`
 const RPC_URL = IS_DEVNET ? web3.clusterApiUrl('devnet') : 'http://127.0.0.1:8899';
 
 
@@ -34,6 +34,7 @@ async function main() {
     const connection = new web3.Connection(RPC_URL);
     const user = await initializeKeypair(connection);
 
+
     // 1. Create New Mint Account
 
     // 1a. Fetch the Mint Info
@@ -42,9 +43,9 @@ async function main() {
 
     // 3. Mint Tokens
 
-    // 4. Create Deligate
+    // 4. Create Delegate
 
-    // 4. Create Deligate Token Account
+    // 4. Create Delegate Token Account
 
     // 5. Delegate Transfers Tokens to Self
 
